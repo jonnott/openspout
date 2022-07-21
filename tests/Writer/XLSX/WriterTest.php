@@ -435,7 +435,7 @@ final class WriterTest extends TestCase
     {
         $fileName = 'test_add_row_should_apply_height.xlsx';
 
-        $this->writeToXLSXFile([Row::fromValues(['xlsx--11'])->setHeight('25')], $fileName);
+        $this->writeToXLSXFile([Row::fromValues(['xlsx--11'])->setHeight(25)], $fileName);
 
         $xmlReader = $this->getXmlReaderForSheetFromXmlFile($fileName, '1');
 
