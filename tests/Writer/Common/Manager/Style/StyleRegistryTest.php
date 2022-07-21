@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace OpenSpout\Writer\Common\Manager\Style;
 
-use AssertionError;
 use OpenSpout\Common\Entity\Style\Style;
+use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -50,7 +50,7 @@ final class StyleRegistryTest extends TestCase
         try {
             (new Style())->getId();
             self::fail('Style::getId should never be called before registration');
-        } catch (AssertionError $assertionError) {
+        } catch (AssertionFailedError $assertionError) {
         }
     }
 
